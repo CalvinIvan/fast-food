@@ -20,7 +20,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={wSans.className}>
         <Nav />
-        {children}
+        <main className="m-auto min-h-screen min-w-[300px] max-w-[95vw] p-4">
+          {children}
+        </main>
       </body>
     </html>
   );

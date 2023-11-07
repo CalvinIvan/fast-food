@@ -34,13 +34,13 @@ const Nav = () => {
         </div>
       ) : (
         <div className="relative z-[999] hidden lg:block">
-          <nav className="fixed left-1/2 top-2 flex w-[50%] -translate-x-1/2 items-center justify-center rounded-full bg-gray-200/[0.25] py-4 sm:h-[initial]">
-            <ul className="flex flex-row items-center justify-center gap-[2.5rem] border border-black px-16 text-xl">
+          <nav className="fixed left-1/2 top-2 flex w-[50%] -translate-x-1/2 items-center justify-center rounded-full bg-gray-200/[0.5] py-4 sm:h-[initial]">
+            <ul className="flex flex-row items-center justify-center gap-[2.5rem] px-16 text-xl">
               {navLinks.map((link) => {
                 return (
                   <li
                     key={link.name}
-                    className="font-normal text-white transition hover:scale-105 hover:underline"
+                    className="text-2xl font-semibold text-white transition hover:scale-105 hover:underline"
                   >
                     <Link href={link.link}>{link.name}</Link>
                   </li>
