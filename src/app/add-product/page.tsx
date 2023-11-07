@@ -85,7 +85,12 @@ export default function AddProduct() {
               <option value="Pizza">Pizza</option>
             </select>{" "}
           </div>
-          <FormSubmitButton className="btn-block">Add Product</FormSubmitButton>
+          <button
+            type="submit"
+            className="rounded-xl bg-red-500/[0.5] p-2 font-medium text-white transition hover:scale-105"
+          >
+            Add Product
+          </button>
         </form>
       </div>
     </div>
