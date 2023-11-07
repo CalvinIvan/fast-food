@@ -1,6 +1,37 @@
 import Image from "next/image";
 import background from "@/assets/bg1.png";
 import FormSubmitButton from "../components/FormSubmit";
+import { prisma } from "@/lib/prisma";
+import { redirect } from "next/navigation";
+
+export const metadata = {
+  title: "Add Product - Speedy Bites",
+};
+
+async function addProduct(formData: FormData) {
+  "use server";
+  const name = formData.get("name")?.toString();
+  const description = formData.get("description")?.toString();
+  const imageUrl = formData.get("imageUrl")?.toString();
+  const price = Number(formData.get("price") || 0);
+  const category = formData.get("category")?.toString();
+
+  if (!name || !description || !imageUrl || !price || !category) {
+    throw Error("Please fill all the fields");
+  }
+
+  await prisma.product.create({
+    data: {
+      name,
+      description,
+      imageUrl,
+      price,
+      category,
+    },
+  });
+
+  redirect("/");
+}
 
 export default function AddProduct() {
   return (
@@ -19,7 +50,7 @@ export default function AddProduct() {
         <h1 className="mb-5 text-4xl font-semibold text-slate-100/[0.75] sm:mb-3 md:text-5xl">
           Add Product
         </h1>
-        <form>
+        <form action={addProduct}>
           <input
             required
             name="name"
@@ -46,6 +77,14 @@ export default function AddProduct() {
             type="number"
             className="input input-bordered mb-3 w-full rounded-xl  bg-white/75 p-2"
           />
+          <div className="mb-3 rounded-xl bg-white/75 p-2">
+            <span className="font-semibold text-gray-700/90">Category: </span>
+            <select className="rounded-xl p-1 text-gray-500/75">
+              <option>Select</option>
+              <option value="Burger">Burger</option>
+              <option value="Pizza">Pizza</option>
+            </select>{" "}
+          </div>
           <FormSubmitButton className="btn-block">Add Product</FormSubmitButton>
         </form>
       </div>
