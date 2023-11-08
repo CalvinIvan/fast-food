@@ -21,12 +21,12 @@ export default async function Home() {
             priority
           />
         </section>
-        <section className="border border-black">
-          <div className="absolute left-1/2 top-24 z-30 w-[75%] -translate-x-1/2 border border-red-500">
+        <section className="">
+          <div className="absolute top-24 z-30 w-[90vw] md:left-1/2 md:-translate-x-1/2">
             <div>
               <div className="hero bg-base-100/[0.2] hover:bg-base-100/[0.35] rounded-xl transition duration-500">
-                <div className="hero-content flex-col border border-black lg:flex-row">
-                  <div className=" flex flex-row border border-black p-5">
+                <div className="hero-content flex-col lg:flex-row">
+                  <div className=" flex flex-col items-center justify-center rounded-xl bg-white/30 p-5 md:flex-row">
                     <Link
                       href={"/products/" + products[0].id}
                       className="transition hover:scale-[1.02]"
@@ -40,7 +40,7 @@ export default async function Home() {
                         priority
                       />
                     </Link>
-                    <div className="m-2 w-[50%] border border-black p-5">
+                    <div className="m-2 w-[85vw] p-5 sm:w-[50%]">
                       <h1 className="text-3xl font-bold text-white sm:mb-5">
                         Featured Item!
                       </h1>
@@ -54,7 +54,7 @@ export default async function Home() {
                       </p>
                       <Link
                         href={"/products/" + products[0].id}
-                        className="btn border-none bg-gradient-to-r from-indigo-500 to-blue-500 text-white transition hover:scale-105"
+                        className="btn rounded-xl border-none bg-white/75 p-2 font-semibold text-gray-700 transition hover:scale-105"
                       >
                         View Item!
                       </Link>
@@ -62,7 +62,7 @@ export default async function Home() {
                   </div>
                 </div>
               </div>
-              <div className="my-4 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
+              <div className="my-4 grid grid-cols-1 justify-center border border-black md:grid-cols-2 xl:grid-cols-3">
                 {products.slice(1).map((product) => (
                   <ProductCard product={product} key={product.id} />
                 ))}
