@@ -4,11 +4,11 @@ export const navLinks = [
     link: "/",
   },
   {
-    name: "About Us",
-    link: "#about",
+    name: "Featured Items",
+    link: "#featured",
   },
   {
-    name: "Events",
+    name: "About us",
     link: "#events",
   },
   {

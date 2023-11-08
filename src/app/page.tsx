@@ -18,12 +18,12 @@ export default async function Home() {
               alt="Hero"
               width={500}
               height={700}
-              className="h-[50rem] w-[50rem] rounded-full opacity-90"
+              className="h-[20rem] w-[20rem] rounded-full opacity-90 md:h-[50rem] md:w-[50rem]"
             />
             <div className="absolute rounded-2xl bg-gray-700/75">
-              <h1 className="flex w-[30vw] flex-col text-center text-5xl font-bold uppercase">
+              <h1 className="flex w-[95vw] flex-col text-center text-2xl font-bold uppercase md:w-[30vw] md:text-5xl">
                 Speedy Bites, <br />
-                <span className="text-3xl">
+                <span className="text-xl md:text-3xl">
                   {" "}
                   Speedy Service, Gourmet Taste!
                 </span>
@@ -31,7 +31,7 @@ export default async function Home() {
               <p className="mt-5 text-center text-2xl font-medium text-white">
                 Delivery within 45 mins, or its{" "}
                 <span className="bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-2xl font-bold uppercase text-transparent">
-                  Free
+                  Free!
                 </span>
               </p>
             </div>
@@ -40,12 +40,9 @@ export default async function Home() {
       </section>
       <section>
         <h1 className="text-5xl font-bold text-white sm:mb-5">Featured Eats</h1>
-        <div className="hero hover:bg-base-100/[0.35] rounded-xl  bg-gradient-to-r from-red-500/75 to-orange-500/75 transition duration-500">
-          <div className="hero-content flex flex-col p-4 md:flex-col md:items-center md:justify-center lg:flex-row">
-            <Link
-              href={"/products/" + products[0].id}
-              className="transition hover:scale-[1.02]"
-            >
+        <div className="hero hover:bg-base-100/[0.35] rounded-xl  bg-gradient-to-r from-red-500/75 to-orange-500/75 shadow-lg shadow-black/50 transition hover:scale-[1.02]">
+          <div className="hero-content flex flex-col p-4 md:flex-col md:items-start md:justify-center lg:flex-row">
+            <Link href={"/products/" + products[0].id}>
               <Image
                 src={products[0].imageUrl}
                 alt={products[0].name}
@@ -61,7 +58,7 @@ export default async function Home() {
                   {products[0].name}
                 </h1>
               </Link>
-              <p className="py-6 font-semibold text-slate-50">
+              <p className="py-6 font-medium text-slate-50">
                 {products[0].description}
               </p>
               <Link
@@ -73,7 +70,7 @@ export default async function Home() {
             </div>
           </div>
         </div>
-        <div className="my-4 grid grid-cols-1 gap-2 md:ml-0 lg:mx-16 lg:grid-cols-2 xl:mx-2 xl:grid-cols-3">
+        <div className="my-4 grid grid-cols-1 gap-2 md:ml-0 lg:mx-16 lg:grid-cols-2 xl:mx-2 xl:grid-cols-3 ">
           {products.slice(1, 4).map((product) => (
             <ProductCard product={product} key={product.id} />
           ))}

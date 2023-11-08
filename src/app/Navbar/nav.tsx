@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { navLinks } from "@/app/lib/data";
+import { navLinks } from "@/lib/data";
 import Link from "next/link";
 import { CgMenuGridO } from "react-icons/cg";
 
@@ -34,7 +34,7 @@ const Nav = () => {
         </div>
       ) : (
         <div className="relative z-[999] hidden md:block">
-          <nav className="fixed left-1/2 flex w-full -translate-x-1/2 items-center justify-center bg-gradient-to-r from-red-500/75 to-orange-500/75 py-4 sm:h-[initial]">
+          <nav className="fixed left-1/2 flex w-full -translate-x-1/2 items-center justify-center bg-gradient-to-r from-red-500 to-orange-500 py-4 sm:h-[initial]">
             <ul className="flex flex-row items-center justify-center gap-[2.5rem] px-16 text-xl">
               {navLinks.map((link) => {
                 return (
