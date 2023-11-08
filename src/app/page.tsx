@@ -17,16 +17,16 @@ export default async function Home() {
             src={Background}
             alt="Background"
             width={50}
-            className="h-[100%] w-[100%] blur-[3rem]"
+            className="h-[100rem] w-[100%] blur-[3rem]"
             priority
           />
         </section>
         <section className="">
-          <div className="absolute top-24 z-30 w-[65vw] md:left-1/2 md:-translate-x-1/2">
-            <div>
+          <div className="absolute top-24 z-30 w-[90vw] md:left-1/2  md:-translate-x-1/2">
+            <div className="w-full items-center justify-center">
               <div className="hero bg-base-100/[0.2] hover:bg-base-100/[0.35] rounded-xl transition duration-500">
-                <div className="hero-content flex-col lg:flex-row">
-                  <div className=" flex flex-col items-center justify-center rounded-xl bg-white/30 p-5 md:flex-row">
+                <div className="hero-content flex-col lg:flex-row ">
+                  <div className=" flex flex-col items-center justify-center rounded-xl bg-white/30 p-5 lg:flex-row">
                     <Link
                       href={"/products/" + products[0].id}
                       className="transition hover:scale-[1.02]"
@@ -40,29 +40,29 @@ export default async function Home() {
                         priority
                       />
                     </Link>
-                    <div className="m-2 w-[85vw] p-5 sm:w-[50%]">
-                      <h1 className="text-3xl font-bold text-white sm:mb-5">
-                        Featured Item!
+                    <div className="m-2 w-[85vw] p-5 sm:w-[75%] ">
+                      <h1 className="text-3xl font-bold text-gray-700 sm:mb-5">
+                        Special of the day!
                       </h1>
                       <Link href={"/products/" + products[0].id}>
-                        <h1 className="text-5xl font-bold text-white transition hover:scale-[1.01]">
+                        <h1 className="text-5xl font-bold text-gray-700 transition hover:scale-[1.01]">
                           {products[0].name}
                         </h1>
                       </Link>
-                      <p className="w-[80%] py-6 font-semibold text-slate-50">
+                      <p className="w-[80%] py-6 font-medium text-gray-700">
                         {products[0].description}
                       </p>
                       <Link
                         href={"/products/" + products[0].id}
-                        className="btn rounded-xl border-none bg-white/75 p-2 font-semibold text-gray-700 transition hover:scale-105"
+                        className="btn rounded-xl border-none bg-white/50 p-3 font-semibold text-gray-700"
                       >
-                        View Item!
+                        View Special
                       </Link>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="my-4 grid grid-cols-1 justify-center md:grid-cols-2 xl:grid-cols-3">
+              <div className="mx-auto my-4 grid w-[75vw] justify-center md:w-[85vw] md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
                 {products.slice(1).map((product) => (
                   <ProductCard product={product} key={product.id} />
                 ))}

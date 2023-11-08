@@ -13,7 +13,7 @@ const Nav = () => {
     <div>
       <CgMenuGridO
         onClick={handleNav}
-        className="fixed right-4 top-4 z-[99] overflow-hidden text-4xl text-white hover:cursor-pointer lg:hidden"
+        className="fixed right-4 top-4 z-[99] overflow-hidden text-4xl text-white hover:cursor-pointer md:hidden"
       />
       {nav ? (
         <div className="fixed top-0 z-20 flex h-screen w-full flex-col items-center justify-center bg-white/[0.05] duration-200 ease-in-out ">
@@ -33,14 +33,14 @@ const Nav = () => {
           </ul>
         </div>
       ) : (
-        <div className="relative z-[999] hidden lg:block">
-          <nav className="fixed left-1/2 top-2 flex w-[50%] -translate-x-1/2 items-center justify-center rounded-full bg-gray-200/[0.5] py-4 sm:h-[initial]">
+        <div className="relative z-[999] hidden md:block">
+          <nav className="fixed left-1/2 flex w-full -translate-x-1/2 items-center justify-center rounded-lg bg-gray-200/[0.75] py-4 sm:h-[initial]">
             <ul className="flex flex-row items-center justify-center gap-[2.5rem] px-16 text-xl">
               {navLinks.map((link) => {
                 return (
                   <li
                     key={link.name}
-                    className="text-2xl font-semibold text-white transition hover:scale-105 hover:underline"
+                    className="text-lg font-semibold text-gray-700/75 transition hover:scale-105 hover:underline"
                   >
                     <Link href={link.link}>{link.name}</Link>
                   </li>

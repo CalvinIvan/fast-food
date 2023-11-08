@@ -24,7 +24,7 @@ export default function ProductCard({ product }: ProductCardProps) {
           />{" "}
         </figure>
         <div className="card-body text-gray-700">
-          <div className="my-2 flex flex-row justify-between">
+          <div className="my-2 flex flex-row justify-start">
             <h2 className="card-title text-lg font-semibold">{product.name}</h2>
             <PriceTag price={product.price} />
           </div>
