@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Background from "@/assets/bg1.png";
+import hero from "@/assets/hero3.png";
 import { prisma } from "@/lib/prisma";
 import ProductCard from "./components/ProductCard";
 import Link from "next/link";
@@ -10,8 +10,35 @@ export default async function Home() {
   });
   return (
     <>
-      <section className="md:mt-6">asdf</section>
-      <section className="lg:mt-12">
+      <section className="md:my-2">
+        <div className="flex min-h-screen w-full flex-row text-white">
+          <div className="relative flex w-full flex-col items-center justify-center p-5">
+            <Image
+              src={hero}
+              alt="Hero"
+              width={500}
+              height={700}
+              className="h-[50rem] w-[50rem] rounded-full opacity-90"
+            />
+            <div className="absolute rounded-2xl bg-gray-700/75">
+              <h1 className="flex w-[30vw] flex-col text-center text-5xl font-bold uppercase">
+                Speedy Bites, <br />
+                <span className="text-3xl">
+                  {" "}
+                  Speedy Service, Gourmet Taste!
+                </span>
+              </h1>
+              <p className="mt-5 text-center text-2xl font-medium text-white">
+                Delivery within 45 mins, or its{" "}
+                <span className="bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-2xl font-bold uppercase text-transparent">
+                  Free
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
         <div className="hero hover:bg-base-100/[0.35] rounded-xl  bg-gradient-to-r from-red-500/75 to-orange-500/75 transition duration-500">
           <div className="hero-content flex flex-col p-4 md:flex-col md:items-center md:justify-center lg:flex-row">
             <Link

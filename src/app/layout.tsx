@@ -8,7 +8,7 @@ const wSans = Work_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Speedy Bites",
-  description: "Speedy Bites - Speedy Service!",
+  description: "Speedy Bites - Speedy Service, Gourmet Taste!",
 };
 
 export default function RootLayout({

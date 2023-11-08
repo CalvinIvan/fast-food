@@ -58,7 +58,7 @@ export default async function ProductPage({
 
           <PriceTag
             price={product.price}
-            className="badge flex w-16 items-center justify-center rounded-full bg-white/60 font-semibold text-gray-700"
+            className="badge flex w-16 items-center justify-center rounded-full bg-white/30 font-semibold text-white"
           />
           <p className="font-medium text-white/90 lg:w-[25vw]">
             {product.description}
