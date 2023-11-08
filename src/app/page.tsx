@@ -39,6 +39,7 @@ export default async function Home() {
         </div>
       </section>
       <section>
+        <h1 className="text-5xl font-bold text-white sm:mb-5">Featured Eats</h1>
         <div className="hero hover:bg-base-100/[0.35] rounded-xl  bg-gradient-to-r from-red-500/75 to-orange-500/75 transition duration-500">
           <div className="hero-content flex flex-col p-4 md:flex-col md:items-center md:justify-center lg:flex-row">
             <Link
@@ -55,9 +56,6 @@ export default async function Home() {
               />
             </Link>
             <div className="mx-2 w-[95%] lg:mx-2">
-              <h1 className="text-3xl font-bold text-white sm:mb-5">
-                Featured Item!
-              </h1>
               <Link href={"/products/" + products[0].id}>
                 <h1 className="text-5xl font-bold text-white transition hover:scale-[1.01]">
                   {products[0].name}
@@ -76,7 +74,7 @@ export default async function Home() {
           </div>
         </div>
         <div className="my-4 grid grid-cols-1 gap-2 md:ml-0 lg:mx-16 lg:grid-cols-2 xl:mx-2 xl:grid-cols-3">
-          {products.slice(1).map((product) => (
+          {products.slice(1, 4).map((product) => (
             <ProductCard product={product} key={product.id} />
           ))}
         </div>

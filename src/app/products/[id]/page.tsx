@@ -40,7 +40,7 @@ export default async function ProductPage({
   const product = await getProduct(id);
 
   return (
-    <section className="mx-2 w-full rounded-xl bg-gradient-to-r from-red-500/50 to-orange-500/50 sm:mt-[15vh]">
+    <section className="mx-2 w-full rounded-xl bg-gradient-to-r from-red-500/50 to-orange-500/50 sm:mt-[10vh]">
       <div className="flex flex-col p-4 sm:items-center lg:flex-row">
         <Image
           src={product.imageUrl}
