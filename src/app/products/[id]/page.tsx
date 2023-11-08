@@ -41,27 +41,27 @@ export default async function ProductPage({
 
   return (
     <>
-      <section className="relative mx-auto flex items-center justify-center">
+      <section className="fixed mx-auto flex items-center justify-center">
         <Image
           src={Background}
           alt="Background"
-          width={50}
-          className="w-[100%] blur-[3rem] sm:h-[55rem]"
+          width={5110}
+          className="w-[100vw] blur-[3rem] sm:h-[55rem]"
           priority
         />
       </section>
-      <section className="absolute top-16 mx-auto w-[95vw]">
-        <div className="flex flex-col border border-black p-4 md:flex-row md:items-center md:justify-center">
+      <section className="absolute top-16 mx-auto w-[95vw] rounded-2xl bg-white/30">
+        <div className="flex flex-col p-4 md:w-[95vw] md:flex-col md:items-center md:justify-center lg:flex-row">
           <Image
             src={product.imageUrl}
             alt={product.name}
             width={400}
             height={50}
             priority
-            className="w-[95vw] rounded-lg shadow-xl md:w-[50vw] lg:w-[25vw]"
+            className="w-[95vw] rounded-lg shadow-xl md:w-[50vw] lg:w-[40vw]"
           />
-          <div className="mt-2 flex w-auto flex-col rounded-xl border border-black bg-white/20 p-4 md:mx-2 md:w-[50%] lg:w-[25vw]">
-            <h1 className="my-5 text-4xl font-bold text-white/90 sm:text-5xl">
+          <div className="mt-2 flex w-auto flex-col rounded-xl bg-white/20 p-4 md:mx-2 md:w-[50%] lg:w-[40vw]">
+            <h1 className="my-5 text-4xl font-bold text-gray-700/80 sm:text-5xl">
               {" "}
               {product.name}
             </h1>
@@ -70,7 +70,7 @@ export default async function ProductPage({
               price={product.price}
               className="badge my-2 border-none bg-white/50 text-gray-700"
             />
-            <p className="font-medium text-white/90 md:w-auto lg:w-[25vw]">
+            <p className="font-medium text-gray-700 md:w-auto lg:w-[35vw]">
               {product.description}
             </p>
 

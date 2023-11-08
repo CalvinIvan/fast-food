@@ -12,17 +12,17 @@ export default async function Home() {
     <>
       <section>
         {" "}
-        <section className="relative min-h-screen bg-cover">
+        <section className="fixed min-h-screen bg-cover">
           <Image
             src={Background}
             alt="Background"
-            width={50}
-            className="h-[100rem] w-[100%] blur-[3rem]"
+            width={1000}
+            className="h-[100rem] w-[100vw] blur-[3rem]"
             priority
           />
         </section>
         <section className="">
-          <div className="absolute top-24 z-30 w-[90vw] md:left-1/2  md:-translate-x-1/2">
+          <div className="absolute top-20 z-30 w-[90vw] md:left-1/2  md:-translate-x-1/2">
             <div className="w-full items-center justify-center">
               <div className="hero bg-base-100/[0.2] hover:bg-base-100/[0.35] rounded-xl transition duration-500">
                 <div className="hero-content flex-col lg:flex-row ">
@@ -62,7 +62,7 @@ export default async function Home() {
                   </div>
                 </div>
               </div>
-              <div className="mx-auto my-4 grid w-[75vw] justify-center md:w-[85vw] md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
+              <div className="mx-auto my-4 grid w-[75vw] justify-center md:w-[50vw] md:grid-cols-1 lg:w-[85vw] lg:grid-cols-2 xl:w-[95vw] xl:grid-cols-3 2xl:w-[85vw]">
                 {products.slice(1).map((product) => (
                   <ProductCard product={product} key={product.id} />
                 ))}
