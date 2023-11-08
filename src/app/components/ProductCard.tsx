@@ -9,7 +9,7 @@ interface ProductCardProps {
 
 export default function ProductCard({ product }: ProductCardProps) {
   return (
-    <div className="mx-5 my-5 w-[85vw] rounded-2xl bg-white/[0.35] p-5 opacity-[0.85] transition hover:opacity-100 sm:w-[25rem]">
+    <div className="mx-auto my-5 rounded-2xl bg-white/[0.35] p-5 opacity-[0.85] transition hover:opacity-100 sm:w-[25rem]">
       <Link
         href={"/products/" + product.id}
         className="card bg-base-100 w-full transition hover:scale-[1.02] hover:shadow-2xl"

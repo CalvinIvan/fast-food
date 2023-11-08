@@ -22,7 +22,7 @@ export default async function Home() {
           />
         </section>
         <section className="">
-          <div className="absolute top-24 z-30 w-[90vw] md:left-1/2 md:-translate-x-1/2">
+          <div className="absolute top-24 z-30 w-[65vw] md:left-1/2 md:-translate-x-1/2">
             <div>
               <div className="hero bg-base-100/[0.2] hover:bg-base-100/[0.35] rounded-xl transition duration-500">
                 <div className="hero-content flex-col lg:flex-row">
@@ -62,7 +62,7 @@ export default async function Home() {
                   </div>
                 </div>
               </div>
-              <div className="my-4 grid grid-cols-1 justify-center border border-black md:grid-cols-2 xl:grid-cols-3">
+              <div className="my-4 grid grid-cols-1 justify-center md:grid-cols-2 xl:grid-cols-3">
                 {products.slice(1).map((product) => (
                   <ProductCard product={product} key={product.id} />
                 ))}
