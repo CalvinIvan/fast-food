@@ -48,7 +48,7 @@ export default async function Home() {
             </div>
           </div>
         </div>
-        <div className="my-4 grid grid-cols-1 md:ml-36 lg:mx-16 lg:grid-cols-2 xl:mx-0 xl:grid-cols-3">
+        <div className="my-4 grid grid-cols-1 gap-2 md:ml-0 lg:mx-16 lg:grid-cols-2 xl:mx-2 xl:grid-cols-3">
           {products.slice(1).map((product) => (
             <ProductCard product={product} key={product.id} />
           ))}
