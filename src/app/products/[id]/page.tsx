@@ -40,48 +40,37 @@ export default async function ProductPage({
   const product = await getProduct(id);
 
   return (
-    <>
-      <section className="fixed mx-auto flex items-center justify-center">
+    <section className="mx-2 w-full rounded-xl bg-gradient-to-r from-red-500/50 to-orange-500/50 sm:mt-[15vh]">
+      <div className="flex flex-col p-4 sm:items-center lg:flex-row">
         <Image
-          src={Background}
-          alt="Background"
-          width={5110}
-          className="w-[100vw] blur-[3rem] sm:h-[55rem]"
+          src={product.imageUrl}
+          alt={product.name}
+          width={400}
+          height={50}
           priority
+          className="mr-2 h-72 rounded-lg shadow-xl"
         />
-      </section>
-      <section className="absolute top-16 mx-auto w-[95vw] rounded-2xl bg-white/30">
-        <div className="flex flex-col p-4 md:w-[95vw] md:flex-col md:items-center md:justify-center lg:flex-row">
-          <Image
-            src={product.imageUrl}
-            alt={product.name}
-            width={400}
-            height={50}
-            priority
-            className="w-[95vw] rounded-lg shadow-xl md:w-[50vw] lg:w-[40vw]"
+        <div className="mt-2 flex w-full flex-col rounded-xl bg-gradient-to-r from-red-500/50 to-orange-500/50 p-4">
+          <h1 className="my-5 text-5xl font-bold text-white/90">
+            {" "}
+            {product.name}
+          </h1>
+
+          <PriceTag
+            price={product.price}
+            className="badge flex w-16 items-center justify-center rounded-full bg-white/60 font-semibold text-gray-700"
           />
-          <div className="mt-2 flex w-auto flex-col rounded-xl bg-white/20 p-4 md:mx-2 md:w-[50%] lg:w-[40vw]">
-            <h1 className="my-5 text-4xl font-bold text-gray-700/80 sm:text-5xl">
-              {" "}
-              {product.name}
-            </h1>
+          <p className="font-medium text-white/90 lg:w-[25vw]">
+            {product.description}
+          </p>
 
-            <PriceTag
-              price={product.price}
-              className="badge my-2 border-none bg-white/50 text-gray-700"
-            />
-            <p className="font-medium text-gray-700 md:w-auto lg:w-[35vw]">
-              {product.description}
-            </p>
-
-            <Link href="/">
-              <div className="btn mt-2 w-[10rem] rounded-xl border-none bg-white/50 text-center font-semibold text-gray-700 transition hover:scale-105">
-                Back to home
-              </div>
-            </Link>
-          </div>
+          <Link href="/" className="w-[8rem]">
+            <div className="mt-2 w-[8rem] rounded-xl bg-gradient-to-r from-red-500/90 to-orange-500/90 p-2 text-center font-semibold text-white transition hover:scale-105">
+              Back to home
+            </div>
+          </Link>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }

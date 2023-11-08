@@ -18,9 +18,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={wSans.className}>
+      <body className={`${wSans.className} bg-[#1E0800]`}>
         <Nav />
-        <main className=" min-h-screen min-w-[300px] max-w-full p-4">
+        <main className="m-auto min-h-screen min-w-[300px] max-w-7xl p-4">
           {children}
         </main>
       </body>
