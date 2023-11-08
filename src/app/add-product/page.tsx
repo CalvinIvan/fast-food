@@ -30,7 +30,7 @@ async function addProduct(formData: FormData) {
     },
   });
 
-  redirect("/");
+  redirect("/add-product");
 }
 
 export default function AddProduct() {
@@ -78,19 +78,22 @@ export default function AddProduct() {
             className="input input-bordered mb-3 w-full rounded-xl  bg-white/75 p-2"
           />
           <div className="mb-3 rounded-xl bg-white/75 p-2">
-            <span className="font-semibold text-gray-700/90">Category: </span>
-            <select className="rounded-xl p-1 text-gray-500/75">
-              <option>Select</option>
-              <option value="Burger">Burger</option>
+            <label className="font-semibold text-gray-700/90">Category: </label>
+            <select
+              name="category"
+              id="category"
+              className="rounded-xl bg-white/75 p-2 text-gray-700/90"
+            >
               <option value="Pizza">Pizza</option>
-            </select>{" "}
+              <option value="Burger">Burger</option>
+            </select>
           </div>
-          <button
+          <FormSubmitButton
             type="submit"
             className="rounded-xl bg-red-500/[0.5] p-2 font-medium text-white transition hover:scale-105"
           >
             Add Product
-          </button>
+          </FormSubmitButton>
         </form>
       </div>
     </div>
