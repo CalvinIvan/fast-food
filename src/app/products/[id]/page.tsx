@@ -66,9 +66,9 @@ export default async function ProductPage({
             {product.description}
           </p>
 
-          <Link href="/" className="mt-5 w-[8rem]">
-            <div className="mt-2 w-[8rem] rounded-xl bg-red-500 p-2 text-center font-semibold text-white transition hover:scale-105">
-              Back to home
+          <Link href="/menu" className="mt-5 w-[5rem]">
+            <div className="mt-2 w-[5rem] rounded-xl bg-red-500 p-2 text-center font-semibold text-white transition hover:scale-105">
+              Back
             </div>
           </Link>
         </div>
