@@ -38,9 +38,9 @@ export default async function Home() {
           </div>
         </div>
       </section>
-      <section>
-        <h1 className="text-5xl font-bold text-white sm:mb-5">Featured Eats</h1>
-        <div className="hero hover:bg-base-100/[0.35] rounded-xl  bg-gradient-to-r from-red-500/75 to-orange-500/75 shadow-lg shadow-black/50 transition hover:scale-[1.02]">
+      <h1 className="text-5xl font-bold text-white sm:mb-5">Featured Eats</h1>
+      <section className="flex flex-col items-center">
+        <div className="hero hover:bg-base-100/[0.35] rounded-xl  bg-gradient-to-r from-red-500/75 to-orange-500/75 shadow-lg shadow-black/50 transition hover:scale-[1.02] hover:cursor-pointer">
           <div className="hero-content flex flex-col p-4 md:flex-col md:items-start md:justify-center lg:flex-row">
             <Link href={"/products/" + products[0].id}>
               <Image
@@ -63,18 +63,20 @@ export default async function Home() {
               </p>
               <Link
                 href={"/products/" + products[0].id}
-                className="btn mt-2 w-[10rem] rounded-xl border-none bg-gradient-to-r from-red-500/90 to-orange-500/90 p-2 text-center font-semibold text-white transition hover:text-white/75"
+                className="btn mt-2 w-[10rem] rounded-xl border-none bg-[#FDC514]/50 p-2 text-center font-semibold text-white transition hover:text-white/75"
               >
                 View Item!
               </Link>
             </div>
           </div>
         </div>
-        <div className="my-4 grid grid-cols-1 gap-2 md:ml-0 lg:mx-16 lg:grid-cols-2 xl:mx-2 xl:grid-cols-3 ">
-          {products.slice(1, 4).map((product) => (
-            <ProductCard product={product} key={product.id} />
-          ))}
-        </div>
+        <section className="flex w-[95%] flex-col lg:flex-row">
+          <div className="my-4 grid w-[95%] grid-cols-1  gap-2 md:ml-0 lg:mx-16 lg:grid-cols-2 xl:mx-2 xl:grid-cols-3">
+            {products.slice(1, 4).map((product) => (
+              <ProductCard product={product} key={product.id} />
+            ))}
+          </div>
+        </section>
       </section>
     </>
   );
