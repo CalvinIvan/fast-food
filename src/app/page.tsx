@@ -77,6 +77,86 @@ export default async function Home() {
             ))}
           </div>
         </section>
+        <h1 className="mt-10 text-5xl font-bold text-white sm:mb-5">
+          About Us
+        </h1>
+        <section className="w-[95%] border border-black">
+          <p className="m-5 text-white">
+            <span className="font-sans text-xl text-xl  font-bold">
+              Welcome to Speedy Bites: Where Speedy Service Meets Gourmet Taste!{" "}
+            </span>
+            <br />
+            At Speedy Bites, we believe that fast food doesn&apos;t have to mean
+            compromising on quality. Our passion for delicious, gourmet flavors
+            combined with lightning-fast service sets us apart in the world of
+            quick dining. Established with the vision to redefine fast food
+            experiences, Speedy Bites combines the convenience of quick bites
+            with the indulgence of gourmet cuisine.
+            <br />
+            <br />
+            <span className="font-sans text-xl font-bold">Our Story </span>
+            <br />
+            Founded on the principle of providing mouthwatering meals without
+            the wait, Speedy Bites opened its doors with a mission: to serve up
+            delectable dishes prepared with the finest ingredients, all within
+            moments of your order. Every item on our menu reflects our
+            commitment to culinary excellence and unparalleled efficiency.
+            <br />
+            <br />
+            <span className="font-sans text-xl font-bold">
+              Speedy Service, Gourmet Taste!{" "}
+            </span>
+            <br />
+            Our slogan, &quot;Speedy Service, Gourmet Taste!&quot; encapsulates
+            our dedication to delivering a dining experience that is both quick
+            and exquisite. Whether you&apos;re on a lunch break, a family
+            outing, or catching up with friends, Speedy Bites offers a menu
+            crafted to tantalize your taste buds and satisfy your cravings in
+            record time.
+            <br />
+            <br />
+            <span className="font-sans text-xl font-bold">
+              The Speedy Bites Difference{" "}
+            </span>
+            <br />
+            What sets Speedy Bites apart is our unwavering dedication to
+            quality. Our chefs meticulously curate each dish, ensuring that
+            every bite bursts with flavor. From our crispy, golden fries to our
+            succulent burgers and fresh salads, every item is made to order
+            using the freshest ingredients sourced locally. We take pride in
+            serving food that not only tastes exceptional but also nourishes the
+            body and soul.
+            <br />
+            <br />
+            <span className="font-sans text-xl font-bold">
+              Community Commitment{" "}
+            </span>
+            <br />
+            Speedy Bites is not just a fast food restaurant; we are a part of
+            the community. We believe in giving back and supporting local
+            initiatives. Through various community outreach programs and
+            partnerships, we aim to make a positive impact beyond our restaurant
+            walls.
+            <br />
+            <br />
+            <span className="font-sans text-xl font-bold">
+              Join Us for a Speedy Gourmet Experience{" "}
+            </span>
+            <br />
+            We invite you to embark on a culinary journey where fast and gourmet
+            seamlessly coexist. Visit Speedy Bites today and experience the
+            thrill of Speedy Service and Gourmet Taste! Whether you&apos;re in a
+            hurry or looking to savor a leisurely meal, we guarantee
+            satisfaction with every bite. Thank you for choosing Speedy Bites,
+            where your cravings meet their match, and your time is always
+            valued.
+            <br />
+            <br />
+            Sincerely,
+            <br />
+            The Speedy Bites Team
+          </p>
+        </section>
       </section>
     </>
   );
