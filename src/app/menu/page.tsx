@@ -11,7 +11,7 @@ export default async function Menu() {
   // const [category, setCategory] = useState();
 
   const products = await prisma.product.findMany({
-    orderBy: { price: "desc" },
+    orderBy: { category: "desc" },
   });
   return (
     <section className="mt-16 flex w-[95%]  flex-col">
