@@ -40,7 +40,7 @@ export default async function Home() {
       </section>
       <h1 className="text-5xl font-bold text-white sm:mb-5">Featured Eats</h1>
       <section className="flex flex-col items-center">
-        <div className="hero hover:bg-base-100/[0.35] rounded-xl  bg-gradient-to-r from-red-500/75 to-orange-500/75 shadow-lg shadow-black/50 transition hover:scale-[1.02] hover:cursor-pointer">
+        <div className="hero hover:bg-base-100/[0.35] rounded-xl  bg-gradient-to-b from-[#E99328] to-[#D65F0E] shadow-lg shadow-black/20 transition hover:scale-[1.02] hover:cursor-pointer">
           <div className="hero-content flex flex-col p-4 md:flex-col md:items-start md:justify-center lg:flex-row">
             <Link href={"/products/" + products[0].id}>
               <Image
@@ -77,12 +77,23 @@ export default async function Home() {
             ))}
           </div>
         </section>
-        <h1 className="mt-10 text-5xl font-bold text-white sm:mb-5">
+        <h1 className="flex flex-row font-sans text-5xl font-bold text-white sm:mb-5">
+          Check out our full{" "}
+          <div className="ml-2 transition duration-300 hover:scale-105 hover:underline">
+            <Link href="/menu">
+              <span className="bg-gradient-to-r from-orange-300 to-orange-200 bg-clip-text text-transparent">
+                menu!
+              </span>
+            </Link>
+          </div>
+        </h1>
+
+        <h1 className=" mt-24 text-5xl font-bold text-white sm:mb-5 ">
           About Us
         </h1>
-        <section className="w-[95%] border border-black">
+        <section className="w-[95%]">
           <p className="m-5 text-white">
-            <span className="font-sans text-xl text-xl  font-bold">
+            <span className="font-sans text-xl font-bold">
               Welcome to Speedy Bites: Where Speedy Service Meets Gourmet Taste!{" "}
             </span>
             <br />

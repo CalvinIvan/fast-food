@@ -3,6 +3,8 @@ import { Work_Sans } from "next/font/google";
 import "./globals.css";
 
 import Nav from "./Navbar/nav";
+import Footer from "./footer";
+import ReactNodeFooter from "./footer";
 
 const wSans = Work_Sans({ subsets: ["latin"] });
 
@@ -25,6 +27,7 @@ export default function RootLayout({
         <main className="m-auto min-h-screen min-w-[300px] max-w-7xl p-4">
           {children}
         </main>
+        <Footer />
       </body>
     </html>
   );

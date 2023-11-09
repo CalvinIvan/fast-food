@@ -50,22 +50,24 @@ export default async function ProductPage({
           priority
           className="rounded-lg shadow-xl sm:h-72"
         />
-        <div className="mt-2 flex w-full flex-col rounded-xl p-4">
-          <h1 className="my-5 text-5xl font-bold text-white/90">
-            {" "}
-            {product.name}
-          </h1>
+        <div className="mt-2 flex w-full flex-col items-center rounded-xl p-4">
+          <div>
+            <h1 className="mt-5 text-5xl font-bold text-white/90">
+              {" "}
+              {product.name} <span></span>
+            </h1>
 
-          <PriceTag
-            price={product.price}
-            className="badge flex w-16 items-center justify-center rounded-full bg-white/30 font-semibold text-white"
-          />
+            <PriceTag
+              price={product.price}
+              className="badge flex w-16 rounded-full bg-white/30 font-semibold text-white"
+            />
+          </div>
           <p className="font-medium text-white/90 lg:w-[25vw]">
             {product.description}
           </p>
 
-          <Link href="/" className="w-[8rem]">
-            <div className="mt-2 w-[8rem] rounded-xl bg-gradient-to-r from-red-500/90 to-orange-500/90 p-2 text-center font-semibold text-white transition hover:scale-105">
+          <Link href="/" className="mt-5 w-[8rem]">
+            <div className="mt-2 w-[8rem] rounded-xl bg-red-500 p-2 text-center font-semibold text-white transition hover:scale-105">
               Back to home
             </div>
           </Link>
