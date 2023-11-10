@@ -38,7 +38,12 @@ export default async function Home() {
           </div>
         </div>
       </section>
-      <h1 className="text-5xl font-bold text-white sm:mb-5">Featured Eats</h1>
+      <h1
+        id="featured"
+        className="scroll-mt-[5rem] text-5xl font-bold text-white sm:mb-5"
+      >
+        Featured Eats
+      </h1>
       <section className="flex flex-col items-center">
         <div className="hero hover:bg-base-100/[0.35] rounded-xl  bg-gradient-to-b from-[#E99328] to-[#D65F0E] shadow-lg shadow-black/20 transition hover:scale-[1.02] hover:cursor-pointer">
           <div className="hero-content flex flex-col p-4 md:flex-col md:items-start md:justify-center lg:flex-row">
@@ -88,7 +93,10 @@ export default async function Home() {
           </div>
         </h1>
 
-        <h1 className=" mt-24 text-5xl font-bold text-white sm:mb-5 ">
+        <h1
+          id="about"
+          className=" mt-24 scroll-mt-[5rem] text-5xl font-bold text-white sm:mb-5"
+        >
           About Us
         </h1>
         <section className="w-[95%]">
