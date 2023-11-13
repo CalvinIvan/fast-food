@@ -2,11 +2,6 @@ import { prisma } from "@/lib/prisma";
 import ProductCard from "../components/ProductCard";
 import { useState } from "react";
 
-export async function Category(formData: FormData) {
-  const category = formData.get("category")?.toString();
-  alert(category);
-}
-
 export default async function Menu() {
   // const [category, setCategory] = useState();
 
