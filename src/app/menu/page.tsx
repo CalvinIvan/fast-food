@@ -8,10 +8,14 @@ export async function Category(formData: FormData) {
 }
 
 export default async function Menu() {
-  // const [category, setCategory] = useState();
+  //const [category, setCategory] = useState();
 
   const products = await prisma.product.findMany({
-    orderBy: { category: "desc" },
+    where: {
+      category: {
+        equals: "Burger",
+      },
+    },
   });
   return (
     <section className="mt-16 flex w-[95%]  flex-col">
@@ -30,7 +34,7 @@ export default async function Menu() {
         </form>
       </div>
       <div className="my-4 grid w-[95%] grid-cols-1  gap-2 md:ml-0 lg:mx-16 lg:grid-cols-2 xl:mx-2 xl:grid-cols-3">
-        {products.slice(1).map((product) => (
+        {products.slice().map((product) => (
           <ProductCard product={product} key={product.id} />
         ))}
       </div>
