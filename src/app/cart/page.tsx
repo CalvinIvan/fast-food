@@ -27,7 +27,7 @@ export default async function CartPage() {
         <>
           <p className="text-4xl font-bold text-white/75">Cart is empty!</p>
           <Link href="/">
-            <div className="btn mt-2 w-[10rem] border-none  bg-red-500 text-white transition hover:scale-105 hover:bg-white/10">
+            <div className="btn text-md mt-10 w-[9rem] border-none bg-red-500 text-white transition hover:scale-105 hover:bg-white/10">
               Back to home
             </div>
           </Link>
@@ -35,7 +35,7 @@ export default async function CartPage() {
       )}
       <div className="flex w-4/5 justify-center p-5">
         <Link href="/">
-          <div className="btn mt-2 w-[10rem] border-none bg-red-500 text-lg text-white transition hover:scale-105 hover:bg-white/10">
+          <div className="btn text-md mt-2 w-[8rem] border-none bg-red-500 text-white transition hover:scale-105 hover:bg-white/10">
             Checkout
           </div>
         </Link>
