@@ -9,7 +9,7 @@ interface ProductCardProps {
 
 export default function ProductCard({ product }: ProductCardProps) {
   return (
-    <div className=" my-5 rounded-2xl bg-gradient-to-b from-[#ff7b00] to-[#ffea00]/50 p-5 opacity-[0.85] shadow-lg shadow-black/50 transition hover:scale-[1.02] hover:opacity-100 hover:shadow-2xl">
+    <div className=" my-5 rounded-2xl bg-gradient-to-b from-[#ff7b00] to-[#ffea00]/[0.25] p-5 opacity-[0.85] shadow-lg shadow-black/50 transition hover:scale-[1.02] hover:opacity-100 hover:shadow-2xl">
       <Link href={"/products/" + product.id} className="card w-full ">
         <figure>
           <Image

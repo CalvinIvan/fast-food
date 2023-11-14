@@ -42,7 +42,7 @@ export default function ShoppingCartButton({ cart }: ShoppingCartButtonProps) {
           <div className="card-actions">
             <Link
               href="/cart"
-              className="btn btn-primary btn-block"
+              className="btn btn-block bg-gradient-to-r from-[#ff7b00]/75 to-[#ff9e00]"
               onClick={closeDropdown}
             >
               <span className="text-white">View Cart</span>

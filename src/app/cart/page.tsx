@@ -10,8 +10,8 @@ export default async function CartPage() {
   const cart = await getCart();
 
   return (
-    <div>
-      <h1 className="mb-6 text-3xl font-semibold text-white/80">
+    <div className="flex flex-col items-center">
+      <h1 className="mb-3 text-3xl font-semibold text-white/80">
         Items in Cart:
       </h1>
       <ul>
@@ -33,6 +33,13 @@ export default async function CartPage() {
           </Link>
         </>
       )}
+      <div className="flex w-4/5 justify-end px-5">
+        <Link href="/">
+          <div className="btn mt-2 w-[10rem] border-none bg-red-500 text-lg text-white transition hover:scale-105 hover:bg-white/10">
+            Checkout
+          </div>
+        </Link>
+      </div>
     </div>
   );
 }
