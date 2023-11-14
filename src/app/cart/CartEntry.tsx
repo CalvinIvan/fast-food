@@ -27,7 +27,7 @@ export default function CartEntry({
   }
   return (
     <div className="card relative left-1/2 mt-2 w-[50vw] -translate-x-1/2 bg-white/[0.1] shadow-md transition hover:shadow-2xl">
-      <div className="card-body flex flex-col  items-center md:flex-row">
+      <div className="card-body flex flex-col  items-center lg:flex-row">
         <Link href={"/products/" + product.id}>
           <Image
             src={product.imageUrl}
@@ -60,7 +60,7 @@ export default function CartEntry({
               {quantityOptions}
             </select>
           </span>
-          <span className="text-xl font-bold text-white">
+          <span className="text-xl font-semibold text-white">
             {formatPrice(product.price * quantity)}
             {isPending && (
               <span className="loading loading-spinner loading-md ml-3 mt-2" />
@@ -75,12 +75,12 @@ export default function CartEntry({
               });
             }}
           >
-            <span className="absolute left-[-0.5rem] top-[-0.5rem] text-white/75 opacity-100 transition hover:scale-105 hover:text-white">
+            <span className="absolute left-[-0.5rem] top-[-0.5rem] text-3xl text-white/50 opacity-100 transition hover:scale-105 hover:text-white">
               <IoIosCloseCircleOutline />
             </span>
           </span>
         </div>
-        <div className="w-[60vw] p-10 text-center text-white lg:w-2/3">
+        <div className="w-[35vw] text-center text-white lg:w-2/3">
           {product.description}
         </div>
       </div>

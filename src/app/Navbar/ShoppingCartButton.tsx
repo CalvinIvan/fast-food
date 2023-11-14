@@ -15,7 +15,7 @@ export default function ShoppingCartButton({ cart }: ShoppingCartButtonProps) {
     if (dropdown) dropdown.blur();
   }
   return (
-    <div className="dropdown dropdown-end mr-5 mt-2">
+    <div className="dropdown dropdown-bottom mr-5 mt-2">
       <label
         tabIndex={0}
         className="btn-ghost btn-circle btn flex flex-row items-center justify-center"
@@ -33,7 +33,7 @@ export default function ShoppingCartButton({ cart }: ShoppingCartButtonProps) {
       </label>
       <div
         tabIndex={0}
-        className="card dropdown-content card-compact bg-base-100 z-30 mt-3 w-52 shadow-lg"
+        className="card dropdown-content card-compact bg-base-100 z-30 mt-3 w-52 shadow-lg "
       >
         <div className="card-body">
           <span className="text-md text-center font-medium transition hover:scale-[1.02]">

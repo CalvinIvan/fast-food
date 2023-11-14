@@ -33,7 +33,7 @@ export default async function CartPage() {
           </Link>
         </>
       )}
-      <div className="flex w-4/5 justify-end px-5">
+      <div className="flex w-4/5 justify-center p-5">
         <Link href="/">
           <div className="btn mt-2 w-[10rem] border-none bg-red-500 text-lg text-white transition hover:scale-105 hover:bg-white/10">
             Checkout
