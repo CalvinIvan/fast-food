@@ -22,6 +22,7 @@ export default async function Menu() {
       price: "asc",
     },
   });
+
   return (
     <section className="mt-16 flex w-[95%]  flex-col">
       <h1

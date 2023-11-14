@@ -40,7 +40,7 @@ export default async function Home() {
       </section>
       <h1
         id="featured"
-        className="scroll-mt-[5rem] text-5xl font-bold text-white sm:mb-5"
+        className="scroll-mt-[1.5rem] text-5xl font-bold text-white sm:mb-5"
       >
         Featured Eats
       </h1>
@@ -95,7 +95,7 @@ export default async function Home() {
 
         <h1
           id="about"
-          className=" mt-24 scroll-mt-[5rem] text-5xl font-bold text-white sm:mb-5"
+          className=" mt-24 scroll-mt-[1.5rem] text-5xl font-bold text-white sm:mb-5"
         >
           About Us
         </h1>

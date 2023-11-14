@@ -9,6 +9,7 @@ import Background from "@/assets/bg1.png";
 //import { incrementProductQuantity } from "./actions";
 import Link from "next/link";
 import AddToCartButton from "./AddToCartButton";
+import { incrementProductQuantity } from "./actions";
 
 interface ProductPageProps {
   params: {
@@ -66,7 +67,10 @@ export default async function ProductPage({
           <p className="mb-5 w-[40vw] font-medium text-white/90 md:w-[50%]">
             {product.description}
           </p>
-          <AddToCartButton productId={product.id} />
+          <AddToCartButton
+            productId={product.id}
+            incrementProductQuantity={incrementProductQuantity}
+          />
           <Link href="/menu" className="w-[5rem]">
             <div className="mt-2 w-[5rem] rounded-xl bg-red-500 p-2 text-center font-semibold text-white transition hover:scale-105">
               Back

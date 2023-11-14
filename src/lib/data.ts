@@ -5,11 +5,11 @@ export const navLinks = [
   },
   {
     name: "Featured Items",
-    link: "#featured",
+    link: "/#featured",
   },
   {
     name: "About us",
-    link: "#about",
+    link: "/#about",
   },
   {
     name: "Menu",

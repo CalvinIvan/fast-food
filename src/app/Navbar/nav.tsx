@@ -1,57 +1,45 @@
-"use client";
 import React, { useState } from "react";
 import { navLinks } from "@/lib/data";
 import Link from "next/link";
-import { CgMenuGridO } from "react-icons/cg";
+import { FaMagnifyingGlass } from "react-icons/fa6";
 
-const Nav = () => {
-  const [nav, setNav] = useState(false);
-  const handleNav = () => {
-    setNav(!nav);
-  };
+export default function Navbar() {
+  const mag = <FaMagnifyingGlass />;
   return (
-    <div>
-      <CgMenuGridO
-        onClick={handleNav}
-        className="fixed right-4 top-4 z-[99] overflow-hidden text-4xl text-white hover:cursor-pointer md:hidden"
-      />
-      {nav ? (
-        <div className="fixed top-0 z-20 flex h-screen w-full flex-col items-center justify-center bg-white/[0.05] duration-200 ease-in-out ">
-          <ul className="flex flex-col items-center justify-center">
-            {navLinks.map((link) => {
-              return (
-                <li
-                  key={link.name}
-                  className="m-2 flex w-full flex-col items-center justify-center rounded-full bg-gray-100 p-4 shadow-lg shadow-gray-300"
-                >
-                  <Link href={link.link} onClick={handleNav}>
-                    {link.name}
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
-      ) : (
-        <div className="relative z-[999] hidden md:block">
-          <nav className="fixed left-1/2 flex w-full -translate-x-1/2 items-center justify-center bg-gradient-to-r from-red-500 to-orange-500 py-4 sm:h-[initial]">
-            <ul className="flex flex-row items-center justify-center gap-[2.5rem] px-16 text-xl">
-              {navLinks.map((link) => {
-                return (
-                  <li
-                    key={link.name}
-                    className="text-lg font-semibold text-white transition hover:scale-105 hover:underline"
-                  >
-                    <Link href={link.link}>{link.name}</Link>
-                  </li>
-                );
-              })}
-            </ul>
-            <div>asdfasdf</div>
-          </nav>
-        </div>
-      )}
+    <div className="navbar bg-base-100 flex flex-row justify-between border border-white bg-transparent px-5 py-3">
+      <a className="btn btn-ghost text-xl" href="/">
+        <h1 className="mr-5 flex flex-col text-center text-2xl font-bold uppercase text-white ">
+          Speedy Bites
+        </h1>
+      </a>
+
+      <div className="">
+        <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+          <div className="w-10 rounded-full"></div>
+        </label>
+        <ul className="flex flex-row gap-[2.5rem] text-2xl">
+          {" "}
+          {navLinks.map((link) => {
+            return (
+              <li
+                key={link.name}
+                className="text-lg font-semibold text-white transition hover:scale-105 hover:underline"
+              >
+                {" "}
+                <Link href={link.link}>{link.name}</Link>{" "}
+              </li>
+            );
+          })}{" "}
+        </ul>
+      </div>
+
+      <div className="form-control">
+        <input
+          type="text"
+          placeholder="Search 🔎"
+          className="input input-bordered flex w-24 rounded-2xl bg-white/75 px-2 py-1 text-gray-700 md:w-auto"
+        />
+      </div>
     </div>
   );
-};
-export default Nav;
+}
