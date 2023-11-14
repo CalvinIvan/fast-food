@@ -55,11 +55,11 @@ export default async function Navbar() {
           })}
         </ul>
       </div>
-      <form action={searchProducts} className="">
+      <form action={searchProducts}>
         <div className="form-control flex flex-row gap-2 px-5">
           <ShoppingCartButton cart={cart} />
           <input
-            type="searchQuery"
+            name="searchQuery"
             placeholder="Search 🔎"
             className="input input-bordered mt-2 flex h-10 rounded-2xl bg-white/75 px-2 py-1 text-gray-700 md:w-auto"
           />
