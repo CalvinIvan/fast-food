@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="mb-12 flex flex-col items-center bg-gradient-to-r from-red-500 to-orange-500">
+    <footer className="flex flex-col items-center bg-gradient-to-r from-[#ff7b00] to-[#ff9e00]">
       <div className="mt-16 w-[75%] border-t border-gray-300 pt-8"></div>
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <div className="flex justify-center text-white">
@@ -50,7 +50,7 @@ export default function Footer() {
           </li>
         </ul>
 
-        <ul className="mt-12 flex justify-center gap-6 md:gap-8">
+        <ul className="my-12 flex justify-center gap-6 md:gap-8">
           <li>
             <a
               href="/"

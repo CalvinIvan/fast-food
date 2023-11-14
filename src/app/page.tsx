@@ -10,7 +10,7 @@ export default async function Home() {
   });
   return (
     <>
-      <section className="md:my-2">
+      <section className="mt-[-10rem] md:mt-0">
         <div className="flex min-h-screen w-full flex-row text-white">
           <div className="relative flex w-full flex-col items-center justify-center p-5">
             <Image
@@ -45,7 +45,7 @@ export default async function Home() {
         Featured Eats
       </h1>
       <section className="flex flex-col items-center">
-        <div className="hero hover:bg-base-100/[0.35] rounded-xl  bg-gradient-to-b from-[#E99328] to-[#D65F0E] shadow-lg shadow-black/20 transition hover:scale-[1.02] hover:cursor-pointer">
+        <div className="hero hover:bg-base-100/[0.35] rounded-xl bg-gradient-to-bl from-[#ff7b00] to-[#ffea00]/75 shadow-lg shadow-black/20 transition hover:scale-[1.02] hover:cursor-pointer">
           <div className="hero-content flex flex-col p-4 md:flex-col md:items-start md:justify-center lg:flex-row">
             <Link href={"/products/" + products[0].id}>
               <Image
@@ -76,7 +76,7 @@ export default async function Home() {
           </div>
         </div>
         <section className="flex w-[95%] flex-col lg:flex-row">
-          <div className="my-4 grid w-[95%] grid-cols-1  gap-2 md:ml-0 lg:mx-16 lg:grid-cols-2 xl:mx-2 xl:grid-cols-3">
+          <div className="my-4 grid w-[95%] grid-cols-1  gap-2 md:ml-0 lg:mx-16 lg:grid-cols-2 xl:mx-2 xl:grid-cols-3 ">
             {products.slice(1, 4).map((product) => (
               <ProductCard product={product} key={product.id} />
             ))}

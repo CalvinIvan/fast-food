@@ -4,9 +4,6 @@ import { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { cache } from "react";
-import Background from "@/assets/bg1.png";
-//import AddToCartButton from "./AddToCartButton";
-//import { incrementProductQuantity } from "./actions";
 import Link from "next/link";
 import AddToCartButton from "./AddToCartButton";
 import { incrementProductQuantity } from "./actions";
@@ -54,17 +51,16 @@ export default async function ProductPage({
         />
         <div className="mt-2 flex w-full flex-col items-center rounded-xl p-4">
           <div>
-            <h1 className="mt-5 text-5xl font-bold text-white/90">
+            <PriceTag
+              price={product.price}
+              className="badge mt-2 flex w-16 rounded-full bg-white/30 font-semibold text-white"
+            />
+            <h1 className="text-5xl font-bold text-white/90">
               {" "}
               {product.name} <span></span>
             </h1>
-
-            <PriceTag
-              price={product.price}
-              className="badge flex w-16 rounded-full bg-white/30 font-semibold text-white"
-            />
           </div>
-          <p className="mb-5 w-[40vw] font-medium text-white/90 md:w-[50%]">
+          <p className="my-5 mb-5 w-[40vw] font-medium text-white/90 md:w-[35%]">
             {product.description}
           </p>
           <AddToCartButton

@@ -19,9 +19,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="!scroll-smooth ">
+    <html lang="en" className="!scroll-smooth">
       <body
-        className={`${wSans.className} bg-gradient-to-r from-red-500 to-orange-500`}
+        className={`${wSans.className} bg-gradient-to-r from-[#ff7b00] to-[#ff9e00]`}
       >
         <Navbar />
         <main className="m-auto min-h-screen min-w-[300px] max-w-7xl p-4">
