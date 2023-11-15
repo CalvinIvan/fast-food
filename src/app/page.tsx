@@ -10,9 +10,9 @@ export default async function Home() {
   });
   return (
     <>
-      <section className="mt-[-10rem] md:mt-0">
+      <section className="mt-[2.5rem] md:mt-0">
         <div className="flex min-h-screen w-full flex-row text-white">
-          <div className="relative flex w-full flex-col items-center justify-center p-5">
+          <div className="relative flex w-full flex-col items-center justify-start p-5">
             <Image
               src={hero}
               alt="Hero"
@@ -20,7 +20,7 @@ export default async function Home() {
               height={700}
               className="h-[20rem] w-[20rem] rounded-full opacity-90 md:h-[50rem] md:w-[50rem]"
             />
-            <div className="absolute rounded-2xl bg-gray-700/75">
+            <div className="absolute top-24 rounded-2xl bg-gray-700/75">
               <h1 className="flex w-[95vw] flex-col text-center text-2xl font-bold uppercase md:w-[30vw] md:text-5xl">
                 Speedy Bites, <br />
                 <span className="text-xl md:text-3xl">
@@ -28,7 +28,7 @@ export default async function Home() {
                   Speedy Service, Gourmet Taste!
                 </span>
               </h1>
-              <p className="mt-5 text-center text-2xl font-medium text-white">
+              <p className="text-center text-2xl font-medium text-white">
                 Delivery within 45 mins, or its{" "}
                 <span className="bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-2xl font-bold uppercase text-transparent">
                   Free!
@@ -40,12 +40,12 @@ export default async function Home() {
       </section>
       <h1
         id="featured"
-        className="scroll-mt-[1.5rem] text-5xl font-bold text-white sm:mb-5"
+        className="mb-5 scroll-mt-[1.5rem] text-5xl font-bold text-white"
       >
         Featured Eats
       </h1>
       <section className="flex flex-col items-center">
-        <div className="hero hover:bg-base-100/[0.35] rounded-xl bg-gradient-to-bl from-[#ff7b00] to-[#ffea00]/75 shadow-lg shadow-black/20 transition hover:scale-[1.02] hover:cursor-pointer">
+        <div className="hero rounded-xl bg-gradient-to-bl from-[#ff7b00] to-[#ffea00]/75 shadow-lg shadow-black/20 transition hover:scale-[1.02] hover:cursor-pointer hover:bg-base-100/[0.35]">
           <div className="hero-content flex flex-col p-4 md:flex-col md:items-start md:justify-center lg:flex-row">
             <Link href={"/products/" + products[0].id}>
               <Image
@@ -75,22 +75,18 @@ export default async function Home() {
             </div>
           </div>
         </div>
-        <section className="flex w-[95%] flex-col lg:flex-row">
+        <section className="flex w-[95%] flex-col items-center lg:flex-row">
           <div className="my-4 grid w-[95%] grid-cols-1  gap-2 md:ml-0 lg:mx-16 lg:grid-cols-2 xl:mx-2 xl:grid-cols-3 ">
             {products.slice(1, 4).map((product) => (
               <ProductCard product={product} key={product.id} />
             ))}
           </div>
         </section>
-        <h1 className="flex flex-row font-sans text-5xl font-bold text-white sm:mb-5">
-          Check out our full{" "}
-          <div className="ml-2 transition duration-300 hover:scale-105 hover:underline">
-            <Link href="/menu">
-              <span className="bg-gradient-to-r from-orange-300 to-orange-200 bg-clip-text text-transparent">
-                menu!
-              </span>
-            </Link>
-          </div>
+        <h1 className="flex flex-col items-center text-center font-sans text-5xl font-bold text-white sm:mb-5">
+          Check out our full
+          <span className=" text-red-500 ">
+            <Link href="/menu">menu!</Link>
+          </span>
         </h1>
 
         <h1

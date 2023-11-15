@@ -21,9 +21,9 @@ export default async function Navbar() {
   const cart = await getCart();
 
   return (
-    <div className="navbar bg-base-100 m-auto flex max-w-7xl flex-col items-center justify-between bg-transparent px-5 py-3 sm:flex-row">
+    <div className="navbar z-[999] m-auto flex max-w-7xl flex-col items-center justify-between bg-base-100 bg-transparent px-5 py-3 sm:flex-row">
       <div className="flex flex-row items-center justify-center">
-        <Link className="btn btn-ghost text-md lg:text-xl" href="/">
+        <Link className="text-md btn btn-ghost lg:text-xl" href="/">
           <h1 className="flex flex-col text-center text-2xl font-bold uppercase text-white ">
             Speedy Bites
           </h1>
@@ -39,10 +39,10 @@ export default async function Navbar() {
       </div>
 
       <div className="">
-        <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+        <label tabIndex={0} className="avatar btn btn-circle btn-ghost">
           <div className="w-10 rounded-full"></div>
         </label>
-        <ul className="flex flex-col flex-wrap items-center justify-center space-x-5 text-2xl md:flex-row">
+        <ul className="flex flex-col flex-wrap items-center justify-center text-2xl sm:space-x-5 md:flex-row">
           {navLinks.map((link) => {
             return (
               <li

@@ -24,7 +24,7 @@ export default async function Menu() {
   });
 
   return (
-    <section className="mt-16 flex w-[95%]  flex-col">
+    <section className="mt-16 flex w-[95] flex-col items-center sm:w-[95%]">
       <h1
         id="featured"
         className="flex scroll-mt-[5rem] flex-col text-center text-5xl font-bold text-white"
@@ -34,11 +34,11 @@ export default async function Menu() {
       <section className="mt-5">
         <h1
           id="featured"
-          className="scroll-mt-[5rem] text-5xl font-bold text-white "
+          className="scroll-mt-[5rem] text-center text-5xl font-bold text-white md:text-start"
         >
           Pizzas
         </h1>
-        <div className="my-4 grid w-[95%] grid-cols-1  gap-2 md:ml-0 lg:mx-16 lg:grid-cols-2 xl:mx-2 xl:grid-cols-3">
+        <div className="my-4 grid w-[95%] grid-cols-1  gap-2 md:ml-0 lg:mx-16 lg:grid-cols-2 xl:mx-2 xl:grid-cols-3 ">
           {pizza.slice().map((pizza) => (
             <ProductCard product={pizza} key={pizza.id} />
           ))}
@@ -48,7 +48,7 @@ export default async function Menu() {
       <section className="mt-5">
         <h1
           id="featured"
-          className="scroll-mt-[5rem] text-5xl font-bold text-white "
+          className="scroll-mt-[5rem] text-center text-5xl font-bold text-white md:text-start"
         >
           Burgers
         </h1>
