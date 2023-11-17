@@ -20,7 +20,7 @@ export default async function Home() {
               height={700}
               className="h-[20rem] w-[20rem] rounded-full opacity-90 md:h-[50rem] md:w-[50rem]"
             />
-            <div className="absolute top-24 rounded-2xl bg-gray-700/75">
+            <div className="absolute top-24 rounded-2xl bg-gray-700/75 md:top-80">
               <h1 className="flex w-[95vw] flex-col text-center text-2xl font-bold uppercase md:w-[30vw] md:text-5xl">
                 Speedy Bites, <br />
                 <span className="text-xl md:text-3xl">
